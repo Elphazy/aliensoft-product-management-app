@@ -2,12 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aliensoft Product Management App</title>
+    <meta name="description" content="AlienSoft Product Management App built with Vue 3, Tailwind CSS, and Pinia. Manage products efficiently with search, filters, and CRUD operations." />
+    <title>AlienSoft Product Management App</title>
+
+    <!-- Tailwind CSS -->
     <script type="module" crossorigin src="/aliensoft-product-management-app/assets/index-vTKoOOnF.js"></script>
     <link rel="stylesheet" crossorigin href="/aliensoft-product-management-app/assets/index-C6G_3qQV.css">
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="bg-gray-50 text-gray-900 font-sans antialiased">
+    <!-- Root app container -->
+    <div id="app" class="min-h-screen flex flex-col justify-center items-center"></div>
+
+    <!-- Loading placeholder while Vue app mounts -->
+    <noscript>
+      <div class="text-center text-red-600 mt-10">
+        Please enable JavaScript to view the app.
+      </div>
+    </noscript>
+
+    <!-- Main JS entry -->
   </body>
 </html>
