@@ -1,40 +1,196 @@
-# AlienSoft Product Management App
+AlienSoft Product Management App
 
-## Features
+Overview
 
-- Login/logout with localStorage session
-- Product listing (search, filter, categories, min/max price)
-- View product detail
-- Add, Edit, Delete products
-- Route protection for authentication
-- Responsive UI (Tailwind) with AlienSoft branding
+This is a mini Product Management App built with Vue 3, Tailwind CSS, and Pinia, as part of the AlienSoft frontend technical test.
 
-## Getting Started
+The app communicates with the public API at DummyJSON and supports:
 
-```bash
-npm install
-npm run dev
-```
+User authentication (login with token persistence)
 
-Open [http://localhost:5173](http://localhost:5173)
+Product listing with search and filters
 
-## Folders
+Viewing product details
 
-- `/src/pages` — Login, Products, AddProduct, EditProduct, ViewProduct
-- `/src/stores` — Stores for auth, products
-- `/src/router` — Vue Router
-- `/src/index.css` — Tailwind imports
+Adding, editing, and deleting products
 
-## APIs Used
+State management via Pinia
 
-- DummyJSON Auth: https://dummyjson.com/docs/auth
-- DummyJSON Products: https://dummyjson.com/docs/products
+Responsive UI using Tailwind CSS (#000080 primary color)
 
-## Deployment
 
-For GitHub Pages  
-- Run: `npm run build`
-- [Vite static deploy guide](https://vitejs.dev/guide/static-deploy.html#github-pages)
+The app is deployed on GitHub Pages:
+https://elphazy.github.io/aliensoft-product-management-app/
+
 
 ---
-**Ready for review!**
+
+Features
+
+Login & Authentication
+
+Login form with username and password
+
+Stores token and user info in Pinia + localStorage
+
+Route protection: redirects unauthenticated users to /login
+
+
+Product Management
+
+List products with thumbnail, title, category, price, stock
+
+Search by title, filter by category or price range
+
+View product details
+
+Add, Edit, Delete products
+
+
+State Management (Pinia)
+
+Auth store: manages login state and token
+
+Product store: manages products, loading state, error state, CRUD actions
+
+
+UI/UX
+
+Tailwind CSS utility-first styling
+
+Loading spinners / skeletons for async actions
+
+Responsive for laptop and tablet screens
+
+
+
+
+---
+
+Project Structure
+
+/src
+  /pages      # Login, Products, AddProduct, ViewProduct
+  /components # Reusable UI components (tables, forms, buttons)
+  /stores     # Pinia stores (auth, products)
+  /router     # Vue Router setup and route guards
+  /assets     # Images and static files
+  main.js     # App entry point
+index.html    # Main HTML template
+vite.config.mjs  # Vite configuration (base path for GitHub Pages)
+package.json
+
+
+---
+
+Prerequisites
+
+Node.js v18+
+
+npm v9+
+
+Termux (if using Android) or any UNIX-like terminal
+
+
+
+---
+
+Getting Started
+
+1. Clone the repository
+
+git clone https://github.com/elphazy/aliensoft-product-management-app.git
+cd aliensoft-product-management-app
+
+2. Install dependencies
+
+npm install
+
+3. Development Server
+
+npm run dev
+
+Open http://localhost:5173 in your browser.
+
+
+---
+
+Build for Production
+
+npm run build
+
+> This generates a dist/ folder ready for deployment.
+
+
+
+
+---
+
+GitHub Pages Deployment (Termux / Linux / MacOS)
+
+1. Install gh-pages if not installed:
+
+
+
+npm install gh-pages --save-dev
+
+2. Add deploy scripts in package.json:
+
+
+
+"scripts": {
+  "build": "vite build",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
+
+3. Deploy:
+
+
+
+npm run deploy
+
+Your site will be available at:
+
+https://<username>.github.io/aliensoft-product-management-app/
+
+> Tip: Make sure vite.config.mjs has base: '/aliensoft-product-management-app/'.
+
+
+
+
+---
+
+API Endpoints
+
+Auth: DummyJSON Auth
+
+Products: DummyJSON Products
+
+
+All authenticated requests use the token stored in Pinia.
+
+
+---
+
+Assumptions & Notes
+
+Login persists across refresh using localStorage
+
+Routes are protected — users cannot access /products without login
+
+API errors are handled and displayed to the user
+
+Vue 3 Composition API + Pinia used for state management
+
+Tailwind CSS used for styling with primary color #000080
+
+
+
+---
+
+Contact
+
+Elphas Wanyonyi
+Email: mulongoelphas@gmail.com
+GitHub: https://github.com/elphazy
