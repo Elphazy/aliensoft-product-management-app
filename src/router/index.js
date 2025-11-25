@@ -16,7 +16,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL), // ← FIX THIS LINE
+  history: createWebHistory(import.meta.env.BASE_URL), // ← This is crucial 
   routes,
 })
 
