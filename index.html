@@ -15,13 +15,27 @@
     
     <!-- Vue app mount point -->
     <div id="app"></div>
-    
     <script>
-      // Error handler to catch any loading issues
-      window.addEventListener('error', function(e) {
-        alert('Error loading: ' + e.message);
-      });
-    </script>
+  // Test if basic JavaScript works
+  alert('Basic JavaScript is working!');
+  console.log('HTML loaded successfully');
+  
+  // Test if the main.js file exists
+  fetch('/src/main.js')
+    .then(response => {
+      if (response.ok) {
+        alert('main.js file exists and is accessible');
+      } else {
+        alert('main.js file NOT found - status: ' + response.status);
+      }
+    })
+    .catch(error => {
+      alert('Error loading main.js: ' + error.message);
+    });
+</script>
+
+<script type="module" src="/src/main.js"></script>
+    
     
     <script type="module" src="/src/main.js"></script>
   </body>
