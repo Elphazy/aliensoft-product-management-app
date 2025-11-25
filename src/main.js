@@ -1,14 +1,10 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+import App from './App.vue'
+import router from './router'
+import './index.css'
 
-// Simple test app
-const app = createApp({
-  template: `
-    <div style="padding: 20px;">
-      <h1 style="color: green;">Vue is working!</h1>
-      <p>If you see this, Vue mounted successfully</p>
-    </div>
-  `
-})
-
+const app = createApp(App)
+app.use(createPinia())
+app.use(router)
 app.mount('#app')
-alert('Vue app mounted!')
