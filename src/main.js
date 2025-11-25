@@ -8,3 +8,4 @@ const app = createApp(App)
 app.use(createPinia())
 app.use(router)
 app.mount('#app')
+alert('Vue app mounted successfully!') // This will pop up if Vue works
