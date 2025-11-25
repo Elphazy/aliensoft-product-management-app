@@ -1,33 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlienSoft Test</title>
-</head>
-<body>
-    <div id="app">
-        <h1 style="color: green;">{{ message }}</h1>
-        <button @click="count++">Count: {{ count }}</button>
-    </div>
-
-    <!-- Load Vue from CDN -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    
-    <script>
-        // Simple Vue test
-        const { createApp } = Vue;
-        
-        createApp({
-            data() {
-                return {
-                    message: 'Vue CDN is working!',
-                    count: 0
-                }
-            }
-        }).mount('#app');
-        
-        alert('Vue CDN test loaded!');
-    </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlienSoft Product Management App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
