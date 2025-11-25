@@ -3,5 +3,5 @@ import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
   plugins: [vue()],
-  base: "/aliensoft-product-management-app/", // required for GitHub Pages
+  base: "/aliensoft-product-management-app/",
 });
