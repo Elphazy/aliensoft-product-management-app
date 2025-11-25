@@ -3,5 +3,7 @@ import vue from "@vitejs/plugin-vue";
 
 export default defineConfig({
   plugins: [vue()],
-  base: "/aliensoft-product-management-app/",
+  base: process.env.NODE_ENV === 'production' 
+    ? "/aliensoft-product-management-app/" 
+    : "/",
 });
